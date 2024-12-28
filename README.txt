@@ -12,6 +12,7 @@
 
 
 _____________________ | Requirements | _______________________
+
 <> A computer running Linux or macOS
 <> C++11 or later with its standard libraries
 <> G++ or Clang++ compiler
@@ -21,6 +22,7 @@ v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^
 
 
 _____________________ | Instructions | _______________________
+
 [1] In your terminal, change your current directory to the
  unzipped folder containing both header files and the
  "ProjStar.cpp" file.
@@ -43,6 +45,7 @@ v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^
 
 
 ______________ | The Data Structures Involved | ______________
+
 There are 2 primary data structures involved in masterminx.h:
 <> A private map of the master pyraminx's four faces, each
  represented by an array of 16 chars, labeled “PYRAMINX”
@@ -70,15 +73,19 @@ This structure includes a single rotation function that
 handles which level to rotate on the axis and which direction
 to rotate it, clockwise or counter-clockwise.
 ==============================================================
+
 There are 2 primary data structures involved in starpower.h:
+
 <> A custom “Pnode” struct that contains essential information
  That allows it to be usable in a tree and by IDA*
 <> A custom “PQ” struct that represents a priority queue that
  uses a min-heap that sorts Pnodes by order of its f-values.
+
 Both of these structures are essential to the program for many
 reasons. Let’s start by breaking down the Pnode struct (in its
 full name, “Pyraminx Node"). This structure contains many
 different variables:
+
 <> A configuration of the puzzle
 <> The last rotation that created its configuration 
 <> A pointer to the Pnode’s parent
@@ -86,11 +93,14 @@ different variables:
 <> The h-value, supplemented by a built-in heuristic function
 <> The g-value, which is the Pnode’s distance from the root
 <> The f-value, which is the sum of the h-value and g-value.
+
 As can be seen above, a Pnode is equipped for the sole purpose
 of being placed in a tree and used by the A* algorithm. Now,
 let’s break down the PQ struct’s contents:
+
 <> A std::vector that contains Pnode children pointers (HEAP)
 <> An integer storing the size of the heap (HEAPSIZE).
+
 For the sake of priority queues and min-heaps, these variables
 are fairly straightforward in what their purposes are. The
 additional functions that are included in this struct are used
@@ -102,6 +112,7 @@ v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^
 
 
 ___________________ | The Heuristic Used | ___________________
+
 Going back to the built-in heuristic function implemented in
 the Pnode struct, the heuristic I chose to use may not be the
 best, but it does work: max(# colors found on each face) - 1.
