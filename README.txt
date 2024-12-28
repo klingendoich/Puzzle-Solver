@@ -27,6 +27,7 @@ _____________________ | Instructions | _______________________
  unzipped folder containing both header files and the
  "ProjStar.cpp" file.
 ==============================================================
+
 [2] Run the below command to compile the program:
 
  (with g++ compiler)
@@ -35,9 +36,11 @@ _____________________ | Instructions | _______________________
  (with clang++ compiler)
  clang++ -std=c++11 ProjStar.cpp -o ProjectStar
 ==============================================================
+
 [3] Now, run the following command to run the program:
  ./ProjectStar
 ==============================================================
+
 [4] Provide an integer value as the number of moves to
  scramble the master pyraminx puzzle in, and watch it work!
 ______________________________________________________________
