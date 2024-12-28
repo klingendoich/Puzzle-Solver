@@ -9,6 +9,8 @@
 ===================== /    PYRAMINX   \ ======================
 ==================== /_________________\ =====================
 ==============================================================
+
+
 _____________________ | Requirements | _______________________
 <> A computer running Linux or macOS
 <> C++11 or later with its standard libraries
@@ -16,6 +18,8 @@ _____________________ | Requirements | _______________________
 <> A terminal to run the program and read program output from
 ______________________________________________________________
 v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^
+
+
 _____________________ | Instructions | _______________________
 [1] In your terminal, change your current directory to the
  unzipped folder containing both header files and the
@@ -36,6 +40,7 @@ _____________________ | Instructions | _______________________
  scramble the master pyraminx puzzle in, and watch it work!
 ______________________________________________________________
 v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^ 
+
 
 ______________ | The Data Structures Involved | ______________
 There are 2 primary data structures involved in masterminx.h:
@@ -94,6 +99,8 @@ by their corresponding f-values, the Pnodes with the lowest
 fvalues having greatest priority.
 ______________________________________________________________
 v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^
+
+
 ___________________ | The Heuristic Used | ___________________
 Going back to the built-in heuristic function implemented in
 the Pnode struct, the heuristic I chose to use may not be the
